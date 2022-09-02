@@ -26,7 +26,7 @@
 
 \begin{document}
 
-\title{Homework 2: Due Sep 6}
+\title{Homework 3}
 
 \maketitle
 
@@ -35,44 +35,66 @@ I've copied the problem itself below and the question numbers for
 your convenience. 
 
 \begin{enumerate}
-	\item (1.6) Let $a,b,c \in \mathbb{Z}$. Use the definition of divisibility to directly prove
-		the following properties of divisibility.
-		\begin{enumerate}
-			\item If $a \mid b$ and $b \mid c$, then $a \mid c$. 
-			\item If $a \mid b$ and $b \mid a$, then $a = \pm b$.
-			\item If $a \mid b$ and $a \mid c$, then $a \mid (b+c)$ and $a \mid (b-c)$.
-		\end{enumerate}
-	\item (1.9.a) Use the Euclidean algorithm to compute $\operatorname{gcd}(291,252)$ by hand. 
-	\item (1.10.a) Use the extended Euclidean algorithm to find integers $u,v$ such that 
+	\item (1.19) Suppose that $g^a \equiv 1 \mod m$ and $g^b \equiv 1 \mod m$. Prove that 
+	\begin{displaymath}
+		g^{\operatorname{gcd}(a,b)} \equiv 1 \mod m
+	\end{displaymath}
+
+	\item (1.27) Consider the congruence 
+	\begin{displaymath}
+		ax \equiv c \mod m
+	\end{displaymath}
+	\begin{enumerate}
+		\item Prove that there is a solution if and only if $\operatorname{gcd}(a,m)$ divides $c$. 
+		\item If there is a solution, prove that there are exactly $\operatorname{gcd}(a,m)$ 
+			distinct solutions. 
+	\end{enumerate}
+	(Hint: Use the extended Euclidean algorithm.)
+
+	\item (1.28) Let $\lbrace p_1,\ldots,p_r \rbrace$ be a set of prime numbers and let 
+	\begin{displaymath}
+		N = p_1 \cdots p_r + 1 
+	\end{displaymath}
+	Prove that $N$ is not divisible by any of the $p_i$. Use this fact to conclude there are infinitely 
+	many prime numbers.
+
+	\item (1.32) For each of the following primes $p$ and numbers $a$, compute $a^{-1} \mod p$ in two 
+		ways: (i) Use the extended Euclidean algorithm. (ii) Use the fast power algorithm and 
+		Fermat's little theorem. 
+	\begin{enumerate}
+		\item $p=47$ and $a=11$
+		\item $p=587$ and $a=345$
+		\item $p=104801$ and $a=78467$
+	\end{enumerate}
+
+	\item (1.36) This exercise begins the study of squares and square roots modulo $p$. 
+	\begin{enumerate}
+		\item Let $p$ be an odd prime number and let $b$ be an integer with $p \not \mid b$. Prove 
+			that either $b$ has two square roots modulo $p$ or else $b$ has no square roots 
+			modulo $p$. In other words, prove that the congruence 
 		\begin{displaymath}
-			291u + 252v = \operatorname{gcd}(291,252)
+			X^2 \equiv b \mod p
 		\end{displaymath}
-	\item (1.11.a-b) Let $a$ and $b$ be positive integers. 
+		has either two solutions or no solutions in $\mathbb{Z}/p\mathbb{Z}$. (What happens for $p=2$? 
+		What happens if $p \mid b$?)
+	
+		\item For each the following values of $p$ and $b$, find all the square roots of $b$ 
+			modulo $p$. 
 		\begin{enumerate}
-			\item Suppose that there are integers $u$ and $v$ satisfying $au + bv = 1$. Prove 
-			that $\operatorname{gcd}(a,b) = 1$. 
-			\item Suppose that there are integers $u$ and $v$ satisfying $au + bv = 6$. Is 
-				it necessarily true that $\operatorname{gcd}(a,b) = 6$? If not, give a 
-				specific counterexample, and describe in general all the possible values 
-				of $\operatorname{gcd}(a,b)$. 
+			\item $(p,b) = (7,2)$
+			\item $(p,b) = (11,5)$
+			\item $(p,b) = (11,7)$
+			\item $(p,b) = (37,3)$
 		\end{enumerate}
-	\item (1.15) Let $m \geq 1$ be an integer and suppose that 
-		\begin{displaymath}
-			a_1 \equiv a_2 \mod m \ \operatorname{and} \ b_1 \equiv b_2 \mod m.
-		\end{displaymath}
-		Prove that 
-		\begin{displaymath}
-			a_1 \pm b_1 \equiv a_2 \pm b_2 \mod m \ \operatorname{and} \ a_1 \cdot b_1 \equiv 
-			a_2 \cdot b_2 \mod m. 
-		\end{displaymath}
-	\item (1.16.a-c) Write out the following tables for $\mathbb{Z}/m\mathbb{Z}$ and 
-		$(\mathbb{Z}/m\mathbb{Z})^\ast$ as done in Fig. 1.4 and 1.5 in the textbook. 
-		\begin{enumerate}
-			\item Make addition and multiplication tables for $\mathbb{Z}/3\mathbb{Z}$. 
-			\item Make addition and multiplication tables for $\mathbb{Z}/6\mathbb{Z}$.
-			\item Make a multiplication table for the unit group $(\mathbb{Z}/9\mathbb{Z})^\ast$. 
-		\end{enumerate}
-			
+		
+		\item How many square roots does $29$ have modulo $39$? Why doesn't this contradict '
+			assertion in (a)? 
+
+		\item Let $p$ be an odd prime and let $g$ be a primitive root modulo $p$. Then any 
+			number $a$ is equal to some power $g$ modulo $p$, say $a \equiv g^k \mod p$. 
+			Prove that $a$ has a square root modulo $p$ if and only if $k$ is even. 
+	\end{enumerate}
+		
 \end{enumerate}
 
 \end{document}

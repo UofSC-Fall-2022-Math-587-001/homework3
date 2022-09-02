@@ -8,28 +8,36 @@ import (
 	"strconv"
 )
 
-func gcd(a, b int) [3]int {
-	// Implement the following algorithm from Exercise 1.12 of the text 
-	// compute g = gcd(a,b) and u,v such that au + bv = g
-	// 1. Set u = 1, g = a, x = 0, and y = b
-	// 2. If y = 0, set v = (g-au)/b and return (g,u,v) 
-	// 3. Divide g by y with remainder, g = qy+t, with 0 <= t < y 
-	// 4. Set s = u - qx
-	// 5. Set u = x and g = y
-	// 6. Set x = s and y = t
-	// 7. Go to Step (2)
-	var g, u, v int 
-	return [3]int{g,u,v} 
+func fastPower(N, g, A int) int {
+	// Implement the fast-powering algorithm from Exercise 1.25 of the text 
+	// Input: Positive integers N, g, and A
+	// 1. Set a = g and b = 1.
+	// 2. Loop while A > 0. 
+	// 	3. If A = 1 (mod 2), set b = ba (mod N). 
+	//	4. Set a = a^2 (mod N) and A = largest integer <= A/2 
+	//	5. If A > 0, continue with loop at Step 2. 
+	// 6. Return the number b, which equals g^A mod N. 
+	var b int 
+	return b 
 }
-// Additional questions:
-// - What happens when b = 0? Can you fix this? 
-// - Modify the program to return u > 0 and as small as possible. 
-// Hint: if (u,v) is a solution so is (u+b/g,v-a/g). 
 
-// This function builds in the user interaction in homework 1. We 
-// stripped out of main into its own function since we call it 
-// more than once. We return both an integer and any errors 
-// along the way. 
+func primalityTest(N int) bool {
+	// This function takes in an integer and returns true if it is prime 
+	// false if not. How fast can you make it go?
+	var b bool 
+	return b 
+}
+
+func primRootsModN(N int) []int {
+	// Recall that g in Z/NZ is primitive root if every nonzero element of 
+	// can be written as g^k for some integer k. This function should 
+	// take in N and return all primitive roots in Z/NZ. To simplify, 
+	// you can assume that we always feed in prime N. How fast can you make 
+	// go?
+	var l []int 
+	return l
+}
+
 func getInt(s string) (int, error) {
 	fmt.Printf("Enter the %s integer: ",s)
 	reader := bufio.NewReader(os.Stdin) 
