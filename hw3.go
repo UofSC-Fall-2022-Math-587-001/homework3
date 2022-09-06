@@ -39,7 +39,7 @@ func primRootsModN(N int) []int {
 }
 
 func getInt(s string) (int, error) {
-	fmt.Printf("Enter the %s integer: ",s)
+	fmt.Println("Enter your integer: ")
 	reader := bufio.NewReader(os.Stdin) 
 	input, err := reader.ReadString('\n') 
 	if err != nil {
@@ -65,16 +65,7 @@ func main() {
 		return 
 	}
 
-	int2, err2 := getInt("second")
-	if err2 != nil {
-		fmt.Println("Something went wrong. Please try again. This might help: ", err2)
-		return
-	}
+	roots := primRootsModN(int1)
+	fmt.Printf("The primitive roots modulo %d are %d\n",int1,roots)
 
-	g := gcd(int1,int2)[0]
-	u := gcd(int1,int2)[1]
-	v := gcd(int1,int2)[2]
-
-	fmt.Printf("The gcd of %d and %d is %d\n", int1, int2, g)
-	fmt.Printf("We have %d * %d + %d * %d = %d\n", int1, u, int2, v, g)
 } 
