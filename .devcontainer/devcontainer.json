@@ -9,6 +9,22 @@
 		"args": { "VARIANT": "bullseye" }
 	},
 
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			// "settings": { 
+			//	"resmon.show.battery": false,
+			//	"resmon.show.cpufreq": false
+			//},
+			
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"Golang-go",
+				"James-Yu.latex-workshop@8.28.0"
+			]
+		}
+	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
