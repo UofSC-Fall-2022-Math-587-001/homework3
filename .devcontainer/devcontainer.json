@@ -20,8 +20,8 @@
 			
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"Golang-go",
-				"James-Yu.latex-workshop@8.28.0"
+				"golang.Go",
+				"James-Yu.latex-workshop"
 			]
 		}
 	},
